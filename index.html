@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shivam ❤️ My Love</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #ff4d6d, #ff99ac);
+            text-align: center;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 55px;
+            margin-top: 70px;
+        }
+
+        h2 {
+            font-size: 38px;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 22px;
+            width: 75%;
+            margin: auto;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 35px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background-color: white;
+            color: #ff4d6d;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffe6eb;
+        }
+
+        .reasons {
+            display: none;
+            margin-top: 40px;
+            font-size: 22px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .reasons li {
+            margin-bottom: 15px;
+        }
+
+        .heart {
+            position: fixed;
+            color: red;
+            font-size: 20px;
+            animation: float 5s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh); }
+            100% { transform: translateY(-10vh); }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Shivam ❤️ [Aarya]</h1>
+
+<h2>Happy Valentine's Day My Love 💕</h2>
+
+<p>
+You are the most beautiful chapter of my life.  
+Every moment with you feels magical and special.  
+Here are just a few reasons why I love you:
+</p>
+
+<button onclick="showReasons()">Click To See 10 Reasons 💖</button>
+
+<div class="reasons" id="loveReasons">
+    <ol>
+        <li>Your smile makes my worst days better.</li>
+        <li>You understand me like no one else.</li>
+        <li>Your kindness makes you even more beautiful.</li>
+        <li>You support me in everything I do.</li>
+        <li>Your laugh is my favorite sound.</li>
+        <li>You make ordinary moments unforgettable.</li>
+        <li>You believe in me even when I doubt myself.</li>
+        <li>You are my peace and my comfort.</li>
+        <li>You make my world brighter just by being in it.</li>
+        <li>Because you are YOU — and that’s more than enough. ❤️</li>
+    </ol>
+</div>
+
+<script>
+function showReasons() {
+    document.getElementById("loveReasons").style.display = "block";
+}
+
+// Floating hearts
+setInterval(function() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}, 300);
+</script>
+
+</body>
+</html>
